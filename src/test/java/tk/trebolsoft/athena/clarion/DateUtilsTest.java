@@ -1,4 +1,4 @@
-package tk.franciscosaez.clarion;
+package tk.trebolsoft.athena.clarion;
 
 import org.junit.Test;
 

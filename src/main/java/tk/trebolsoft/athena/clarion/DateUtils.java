@@ -1,4 +1,4 @@
-package tk.franciscosaez.clarion;
+package tk.trebolsoft.athena.clarion;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
