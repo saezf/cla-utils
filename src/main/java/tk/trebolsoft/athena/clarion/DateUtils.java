@@ -1,5 +1,6 @@
 package tk.trebolsoft.athena.clarion;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -52,5 +53,16 @@ public final class DateUtils {
      */
     public static int getValueFromTime(LocalTime time) {
         return (int) (SECONDS.between(MIDNIGHT, time) * 100 + 1);
+    }
+
+    /**
+     * Obtains an instance of {@code DayOfWeek} from a given Clarion date value.
+     * @param clarionDate the value of Clarion date
+     * @return the day of week, not null
+     */
+    public static DayOfWeek getDayOfWeekFromValue(int clarionDate) {
+        int clarionDayOfWeek = clarionDate % 7;
+        if (clarionDayOfWeek == 0) clarionDayOfWeek = 7;
+        return DayOfWeek.of(clarionDayOfWeek);
     }
 }

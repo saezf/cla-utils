@@ -2,6 +2,7 @@ package tk.trebolsoft.athena.clarion;
 
 import org.junit.Test;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -29,5 +30,10 @@ public class DateUtilsTest {
     @Test
     public void shouldGetCorrectClarionValueFromGivenTime() throws Exception {
         assertEquals(TEN_PAST_FIVE, DateUtils.getValueFromTime(LocalTime.of(17, 10)));
+    }
+
+    @Test
+    public void shouldGetCorrectDayOfWeekFromGivenClarionValue() throws Exception {
+        assertEquals(DayOfWeek.TUESDAY, DateUtils.getDayOfWeekFromValue(MARCH_13_2001));
     }
 }
